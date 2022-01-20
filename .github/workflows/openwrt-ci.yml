@@ -8,8 +8,6 @@
 name: OpenWrt-CI
 
 on:
-  schedule:
-    - cron: 0 20 * * *
   release:
     types: [published]
 
@@ -28,7 +26,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: master
+          ref: compile-20220120
 
       - name: Space cleanup
         env:
